@@ -6,6 +6,6 @@
 ## usage case
 
 ```javascript
-    var fsPipe = require('fs-pipe');
+    var FsPipe = require('fs-pipe');
 
 ```
