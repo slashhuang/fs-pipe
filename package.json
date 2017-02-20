@@ -2,9 +2,10 @@
   "name": "fs-pipe",
   "version": "1.0.0",
   "description": "a promise base file pipe system",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "babel-node test/index.js"
+    "test": "babel-node test/index.js",
+    "build":"babel index.js -d lib/"
   },
   "repository": {
     "type": "git",
