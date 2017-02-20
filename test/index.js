@@ -5,7 +5,7 @@
 
 
 const path = require('path');
-const fsPipe = require('fs-pipe');
+const fsPipe = require('../index');
 const inst =   new fsPipe();
 
 let sourceStream =path.resolve(process.cwd(),".babelrc");
