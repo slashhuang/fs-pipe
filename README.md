@@ -1,8 +1,10 @@
 # fs-pipe
 
 > a Promise based file stream work flow
+
 > if you are familiar with gulp
-> you will finde fs-pipe very useful to you to handle file type
+
+> you will find fs-pipe very useful to you to handle file IO
 
 
 ## install
@@ -10,6 +12,9 @@
 ```bash
     npm install fs-pipe
 ```
+
+## soure code
+[fs-pipe](./babel/index.js)
 
 ## usage case
 
