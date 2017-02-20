@@ -1,0 +1,11 @@
+{
+  "presets": [
+     "stage-0"
+  ]
+  // ,
+  // "plugins": [
+  //   "transform-async-to-generator",
+  //   "syntax-async-functions",
+  //   "transform-es2015-destructuring"
+  // ]
+}
