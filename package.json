@@ -1,0 +1,24 @@
+{
+  "name": "fs-pipe",
+  "version": "1.0.0",
+  "description": "a promise base file pipe system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slashhuang/fs-pipe.git"
+  },
+  "keywords": [
+    "fs",
+    "node",
+    "pipe"
+  ],
+  "author": "slashhuang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slashhuang/fs-pipe/issues"
+  },
+  "homepage": "https://github.com/slashhuang/fs-pipe#readme"
+}
