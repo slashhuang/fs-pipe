@@ -7,12 +7,12 @@
 const path = require('path');
 import FsPiper from '../lib/index';
 const inst =   new FsPiper();
-
-let sourceStream =path.resolve(process.cwd(),".babelrc");
-let destStream =path.resolve(process.cwd(),"example","hello");
-
+let getFile = (...name)=> path.resolve.apply(null,[process.cwd(),...name])
+let sourceStream = getFile(".babelrc");
+let destStream = getFile("example","hello");
+let emptyStream = getFile("test","readme.md");
 
 inst.src(sourceStream)
      .pipe(destStream)
-     // .empty(LogStreamPath)
+     .empty(emptyStream)
      .final(()=>console.log('file stream done'));
