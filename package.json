@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "babel": "babel/index.js",
   "scripts": {
-    "test": "babel-node test/index.js",
+    "test": "npm run build && babel-node test/index.js",
     "build": "babel babel/index.js -o lib/index.js"
   },
   "repository": {
