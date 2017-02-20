@@ -5,8 +5,8 @@
 
 
 const path = require('path');
-const fsPipe = require('../index');
-const inst =   new fsPipe();
+import { FsPiper} from '../index';
+const inst =   new FsPiper();
 
 let sourceStream =path.resolve(process.cwd(),".babelrc");
 let destStream =path.resolve(process.cwd(),"example","hello");

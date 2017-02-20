@@ -23,6 +23,7 @@
   "homepage": "https://github.com/slashhuang/fs-pipe#readme",
   "devDependencies": {
     "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0"
   }
 }

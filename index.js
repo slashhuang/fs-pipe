@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 //日志采用异步读取，优化IO效率
 export
-class StreamPiper{
+class FsPiper{
     constructor(){
         this.promiseStream = Promise.resolve();
     }
