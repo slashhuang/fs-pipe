@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "nodemon ./test/babel-test.js",
     "test": "npm run build && babel-node test/babel-test.js",
-    "build": "babel babel/index.js -o lib/index.js"
+    "build": "babel babel/index.js -o lib/index.js",
+    "raw": "node  test/raw.js"
   },
   "repository": {
     "type": "git",
