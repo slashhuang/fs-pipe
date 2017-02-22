@@ -38,7 +38,7 @@
 
 ## changeLog
 
-- v1.0.5
+- v1.0.6
 > Add callback for pipe/src/empty to detailize stream detection
 > [使用代码](./test/v1.0.5-test.js)
 
