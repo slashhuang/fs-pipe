@@ -1,6 +1,6 @@
 {
   "name": "fs-pipe",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a promise base file pipe system",
   "main": "lib/index.js",
   "babel": "babel/index.js",
