@@ -6,7 +6,7 @@
   "babel": "babel/index.js",
   "scripts": {
     "dev": "nodemon ./test/babel-test.js",
-    "test": "npm run build && babel-node test/index.js",
+    "test": "npm run build && babel-node test/babel-test.js",
     "build": "babel babel/index.js -o lib/index.js"
   },
   "repository": {
