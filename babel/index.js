@@ -6,27 +6,27 @@
 const fs = require('fs');
 const path = require('path');
 //日志采用异步读取，优化IO效率
-export default
+module.exports =
 class FsPiper{
     constructor(){
         this.promiseStream = Promise.resolve();
     }
     //模拟pipe api
-    pipe(targetFile){
+    pipe(targetFile,callback){
         let nextChain = fileData =>this.PromiseStreamWriter(targetFile,fileData)
-        this.thenChain(nextChain)
+        this.thenChain(nextChain,callback)
         return this;
     }
-    //chained data structure
-    src(sourceFile){
-        let nextChain = ()=>this.PromiseStreamReader(sourceFile);
-        this.thenChain(nextChain);
+    //promise filedata source
+    src(sourceFile,callback){
+        let nextChain =()=>this.PromiseStreamReader(sourceFile);
+        this.thenChain(nextChain,callback);
         return this;
     }
     //清空文件
-    empty(targetFile){
+    empty(targetFile,callback){
         let nextChain = ()=>this.PromiseStreamWriter(targetFile,'');
-        this.thenChain(nextChain);
+        this.thenChain(nextChain,callback);
         return this;
     }
     //最后的回调
@@ -35,8 +35,12 @@ class FsPiper{
             this.thenChain(finalCallback)
         }
     }
-    thenChain(nextChain){
-        this.promiseStream = this.promiseStream.then(nextChain)
+    thenChain(nextChain,callback){
+        this.promiseStream = this.promiseStream.then(data=>{
+            callback && callback(data);
+            // maintain promise chain
+            return nextChain(data);
+        })
     }
     PromiseStreamReader(sourceFile){
        return new Promise((resolve)=>{

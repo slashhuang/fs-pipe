@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "babel": "babel/index.js",
   "scripts": {
+    "dev": "nodemon ./test/babel-test.js",
     "test": "npm run build && babel-node test/index.js",
     "build": "babel babel/index.js -o lib/index.js"
   },
@@ -26,6 +27,8 @@
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0"
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "nodemon": "^1.11.0"
   }
 }
