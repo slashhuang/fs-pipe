@@ -1,4 +1,5 @@
 # fs-pipe
+![fs-pipe](http://img.shields.io/npm/dm/fs-pipe.svg?style=flat-square)
 
 > a Promise based file stream work flow
 
